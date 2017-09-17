@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>糗事百科</title>
+	 <script type="text/javascript" src="./JS/jquery-3.2.0.min.js"></script>
+	<style type="text/css">
+	html,body,ul,li,h3,a{
+		margin: 0;
+		padding: 0;
+	}
+	.head {
+	    background: #ffd52b;
+	    height: 82px;
+	    width: 100%;
+	}
+	.content, .foot{
+		width: 960px;
+		margin: 0 auto;
+		line-height: 1.8;
+		font-family: PingHei,"PingFang SC","Helvetica Neue",Helvetica,STHeitiSC-Light,"Microsoft YaHei",Arial,sans-serif;
+	}
+	.bar{
+		width: 960px;
+		margin: 0 auto;
+	}
+	.clearfix::after{
+		display: block;
+		content:"";
+		clear:both;
+		height: 0;
+	}
+	.logo{
+		float: left;
+	}
+	.list a {
+		display: block;
+		float: left;
+	    margin-right: 1px;
+	    padding: 0 14px;
+	    text-align: center;
+	    line-height: 82px;
+	    font-size: 16.5px;
+	    color: #7a4624;
+	    text-decoration: none;
+	    font-family: PingHei,"PingFang SC","Helvetica Neue",Helvetica,STHeitiSC-Light,"Microsoft YaHei",Arial,sans-serif;;
+    }
+    .list a:hover{
+    	background-color:#ffe36f 
+    }
+    .head .bar .list .hot{
+    	height: 78px;
+	    background: #ffe36f;
+	    border-bottom:4px solid #7a4624;
+    }
+    #login{
+    	text-align: center;
+	    line-height: 82px;
+	    font-size: 16.5px;
+	    color: #7a4624;
+    	float: right;
+    	font-family: "Microsoft YaHei";
+    	text-decoration: none;
+    }
+    .main{
+    	padding: 20px;
+    	width: 100%;
+    	background-color:  #f7f7f7;
+    }
+    .content{
+    	width: 960px;
+    }
+    .left{
+    	width: 640px;
+    	float: left;
+    	background-color: #f7f7f7;
+    }
+    .text{
+    	margin:0 0  20px 0;
+    	padding: 20px;
+    	background-color: #fff;
+    }
+    .text .people{
+    	width: 35px;
+    	height: 35px;
+    	border-radius:50%;
+    }
+    .text .name{
+    	display:inline-block;
+    	font-size: 14px;
+    	margin-left: 8px;
+    	vertical-align: 10px;
+    	color: #9b8878;
+    }
+    .text .name:hover{
+    	color: black;
+    }
+    .text .age{
+    	display: inline-block;
+    	width: 22px;
+    	height: 16px;
+    	margin-left: 10px;
+    	padding-left: 15px;
+    	color: #fff;
+    	vertical-align: 10px;
+    	background-image: url(./images/age.png);
+    	background-size: contain;
+    }
+    .left ul{
+    	list-style: none;
+    }
+    .text ul li{
+    	float: left;
+    	margin-right: 20px;
+    }
+    .share{
+    	width: 30px;
+    	height: 30px;
+    	margin: 0 10px;
+    	float: right;
+    	background-image: url(./images/bg.png);
+    }
+    .weibo{
+    	background-position: 8px 147px;
+    }
+    .kongjian{
+    	background-position: 8px 123px;
+    }
+    .qq{
+    	background-position: 8px 98px;
+    }
+    .weichat{
+    	background-position: 9px 172px;
+    }
+    .text  span{
+	    font-size: 12px;
+	    color: #999;
+	    margin: 20px 0 10px;
+    }
+    .comment:hover{
+        color: #300;
+    }
+    .left a{
+    	text-decoration: none;
+    	color: black;
+    }
+    .choice li{
+    	width: 40px;
+    	height: 35px;
+    	margin:2px;
+    	float: left;
+    	line-height: 35px;
+    	text-align: center;
+    	background: #fff;
+    }
+    .choice li.pre{
+    	 background: #ffaa14;
+   		 color: #fff;
+    }
+    .choice li.next{
+    	 width: 60px;
+    	 background: #ffaa14;
+   		 color: #fff;
+    }
+    .right{
+    	width: 300px;
+    	float: right;
+    	margin-left: 20px;
+    }
+    .inform{
+    	width: 100%;
+    	height: 70px;
+    	background-image: url(./images/inform.png);
+    	/*background-size: contain;*/
+    	background-size: 100%;
+    }
+    .adv{
+    	width: 300px;
+    	height: 250px;
+    	margin-top: 20px;
+    	padding: 2px;
+    }
+    .adv>div{
+    	width: 145px;
+    	float: left;
+    }
+    .adv-small:hover{
+    	border: 1px solid red;
+    }
+    .right span{
+    	font-size: 13px;
+    }
+    .right span:hover{
+    	color: red;
+    }
+    .right a{
+    	text-decoration: none;
+    	color: black;
+    }
+    .choice{
+    	padding: 10px 16px;
+    }
+    .ctrl_d{
+    	display: inline-block;
+    	width: 90px;
+    	height: 25px;
+    	float: left;
+    }
+    .right span{
+    	display: inline-block;
+    	margin-left: 20px;
+	    height: 24px;
+	    line-height: 24px;
+	    font-size: 12px;
+	    color: #aaa;
+	    vertical-align: middle;
+    }
+    .foot{
+    	padding: 20px;
+    }
+    .adv-foot{
+    	width: 728px;
+    	height: 90px;
+    	margin: 0 116px 20px 116px;
+    	background-image: url(./images/foot1.png);
+    }
+    .adv-foot:hover{
+    	background-image: url(./images/foot.png);
+    }
+    .foot-bar{
+    	width: 20%;
+    	float: left;
+    }
+    .foot h3{
+    	font-size: 18px;
+    	font-weight: 400;
+    }
+    .foot ul{
+    	list-style: none;
+    }
+    .foot ul{
+    	font-size: 14px;
+    	font-weight: 400;
+    	line-height: 1.8;
+    }
+    .foot a{
+    	text-decoration: none;
+    	color: #666;
+    }
+    .foot a:hover{
+    	color: #000;
+    }
+    .foot hr{
+    	margin:20px 0;
+    }
+    .foot p{
+    	font-size: 12px;
+    	color: #333;
+    	text-align: center;
+    }
+	</style>
+</head>
+<body>
+<div class="head">
+	<div class="bar clearfix">
+		<img class="logo" src="./images/logo.png">
+		<div class="list">
+			<a class="hot" href="#">热门</a>
+			<a href="#">24小时</a>
+			<a href="#">热图</a>
+			<a href="#">文字</a>
+			<a href="#">穿越</a>
+			<a href="#">糗图</a>
+			<a href="#">新鲜</a>
+			<a href="#">投稿</a>
+		</div>
+		<a id="login"href="#">登录</a>
+	</div>
+</div>
+<div class="main">
+	<div class="content clearfix">
+		<div class="left">
+			<div class="text">
+				<!-- <img src="./images/left1.png"> -->
+				<p>
+					<img class="people"src="./images/people.png">
+					<span class="name">流浪的贝贝</span>
+					<span class="age">21</span>
+				</p>
+				说一个，上学时侯的糗事吧，楼主上学的时侯，所学的专业女生少，后排坐了一个女汉子，那会楼主比较内向不爱说话，时常被这个女汉子捉能，不是上课站起来回答问题时把椅子悄悄的移开，就是在冬天团一个雪球，在上课时趁老师不注意塞到楼主的脖子里，还用手按住。这个酸爽。要不就是在下课无聊的时侯，在楼主背上用手指写我爱你三个字。我一直认为她又是在捉能我，就没有当回事。在学校几年独享了她很多次的”照顾”啊，发现她对别的男生到是挺温柔的。毕业回家的火车上，半夜醒来，不知道什么时侯她竟然坐到了我的对面，身上盖着她的大衣...	<br>
+				<span>620 好笑 ·</span>
+                <span class="comment">20评论</span>
+				<div class="clearfix">
+	                <ul>
+	                	<li><img src="./images/funny.png"></li>
+					    <li><img src="./images/sad.png"></li>
+					    <li><img src="./images/comment.png"></li>
+	                </ul>
+	                <div class="weibo share"></div>
+	                <div class="kongjian share"></div>
+	                <div class="qq share"></div>
+	                <div class="weichat share"></div>
+                </div>
+			</div>
+			<div class="text">
+				<p>
+					<img class="people"src="./images/people.png">
+					<span class="name">流浪的贝贝</span>
+					<span class="age">21</span>
+				</p>
+                早上买早餐时，人好多，排队中！在我旁边有一只狗狗，一下窜到前面叼起一根油条就跑了！卖早餐的老板喊着：喂，谁家的狗狗，油条还没给钱呢！<br>我前面一帅哥：啧啧，厉害啊，它居然插队，还吃霸王餐，比我还牛 逼 ！<br>我后面一个胖妹红着脸说：对不起老板，狗狗是我的！我减肥没成功，狗狗确瘦了几斤，今天实在饿坏了，才这么做的。。。<br>
+                <span>613 好笑 ·</span>
+                <span class="comment">12评论</span>
+                <div class="clearfix">
+	                <ul>
+	                	<li><img src="./images/funny.png"></li>
+					    <li><img src="./images/sad.png"></li>
+					    <li><img src="./images/comment.png"></li>
+	                </ul>
+	                <div class="weibo share"></div>
+	                <div class="kongjian share"></div>
+	                <div class="qq share"></div>
+	                <div class="weichat share"></div>
+                </div>			
+			</div>
+			<div class="text">
+				<p>
+					<img class="people"src="./images/people.png">
+					<span class="name">流浪的贝贝</span>
+					<span class="age">21</span>
+				</p>
+				糗百现在变得坑人了吗，昨天打开糗百，说要更新新版本，我就更新了，没想到直接给我下载个什么鬼糗事游戏，还他妈的直接给我开通了两个话费消费业务，一个育儿读物，另一个铃声制作，而且还直接给中国移动回复是，然后就直接预定成功立马生效，每个月扣12块，非得让我一个资深糗者把糗百给卸载了吗?<br>
+				<span>277 好笑 ·</span>
+                <span class="comment">27评论</span>
+				<div class="clearfix">
+	                <ul>
+	                	<li><img src="./images/funny.png"></li>
+					    <li><img src="./images/sad.png"></li>
+					    <li><img src="./images/comment.png"></li>
+	                </ul>
+	                <div class="weibo share"></div>
+	                <div class="kongjian share"></div>
+	                <div class="qq share"></div>
+	                <div class="weichat share"></div>
+                </div>
+			</div>
+			<ul class="choice">
+				<li class="pre"><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">...</a></li>
+				<li class="next"><a href="#">下一页</a></li>
+			</ul>
+		</div>
+		<div class="right">
+			<div class="inform"><a href="#"></a></div>
+			<div class="adv clearfix">
+				<div class="adv-left">
+					<div class="adv-small"><img src="./images/adv1.png"></div>
+					<a href="#"><span>免费大片</span></a>
+					<div class="adv-small"><img src="./images/adv2.png"></div>
+					<a href="#"><span>hrtjs</span></a>
+				</div>
+				<div class="adv-right">
+					<div class="adv-small"><img src="./images/adv3.png"></div>
+					<a href="#"><span>走兽飞禽</span></a>
+					<div class="adv-small"><img src="./images/adv4.png"></div>
+					<a href="#"><span>走兽飞禽</span></a>					
+				</div>
+			</div>
+			<div class="clearfix">
+				<a href="#"><img src="./images/adv6.png"></a>
+			</div>
+			<img src="./images/ctrl_d.png" class="ctrl_d"><span class="collect">把糗事百科加入收藏夹</span>
+			<div class="clearfix">
+				<a href="#"><img src="./images/adv5.png"></a>
+			</div>
+				<a href="#"><img src="./images/adv7.png"></a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="foot">
+	<div class="adv-foot"></div>
+	<div class="clearfix">
+		<div class="foot-bar">
+			<h3>关于</h3>
+			<ul>
+				<li><a href="#">关于糗百</a></li>
+				<li><a href="#">加入我们</a></li>
+				<li><a href="#">联系方式</a></li>
+			</ul>
+		</div>
+		<div class="foot-bar">
+			<h3>帮助</h3>
+			<ul>
+				<li><a href="#">在线反馈</a></li>
+				<li><a href="#">用户协议</a></li>
+				<li><a href="#">隐私政策</a></li>
+			</ul>
+		</div>
+		<div class="foot-bar">
+			<h3>下载</h3>
+			<ul>
+				<li><a href="#">Android 客户端</a></li>
+				<li><a href="#">iPhone 客户端</a></li>
+			</ul>
+		</div>
+		<div class="foot-bar">
+			<h3>关于</h3>
+			<ul>
+				<li><a href="#">关于糗百</a></li>
+				<li><a href="#">加入我们</a></li>
+				<li><a href="#">联系方式</a></li>
+			</ul>
+		</div>
+		<div class="foot-bar">
+			<h3>关于</h3>
+			<ul>
+				<li><a href="#">关于糗百</a></li>
+				<li><a href="#">加入我们</a></li>
+				<li><a href="#">联系方式</a></li>
+			</ul>
+		</div>
+	</div>
+	<hr>
+	<p>互联网ICP备案：京ICP备14028348号-1 广播电视节目制作经营许可证：（京）字第08319号 网络文化经营许可证：京网文[2017]2369-247号
+	</p>
+	<p>电信与信息服务业务经营许可证：京ICP证140448号 计算机信息网络国际联网单位备案：京公网安备11010502031601号 
+	 </p>
+	<p>友际无限（北京）科技有限公司 违法和不良信息举报电话：010-84872896 邮箱：kefu@qiushibaike.com  
+	</p>
+	<p>© Qiushibaike.com 糗事百科版权所有</p>
+</div>
+<script type="text/javascript">
+    $(function(){
+        $(".list a").click(function(){
+            $(this).addClass("hot");
+            $(this).siblings().removeClass("hot");
+        })
+    })
+    </script>	
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,body,ul,li,a {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        ul {
+            list-style: none;
+        }
+        html,body {
+            background-color: #f7f7f7;
+        }
+        .head {
+            height: 82px;
+            line-height: 82px;
+            background-color: #ffd52b;
+        }
+        .head-content {
+            width: 960px;
+            margin: 0 auto;
+        }
+        .clearfix::after {
+            display: block;
+            content: "";
+            clear: both;
+            height: 0;
+        }
+        .head-content ul {
+            float: left;
+        }
+        .head-content ul li {
+            float: left;
+            height: 82px;
+            line-height: 82px;
+            padding: 0 14px;
+            margin: 0 1px;
+        }
+        .head-content ul li a {
+            color: #7a4624;
+        }
+        .head-content ul li:hover {
+            background: #ffe36f;
+        }
+        .head-content ul li.selected {
+            height: 78px;
+            line-height: 78px;
+            border-bottom: 4px solid #7a4624;
+            background-color: #ffe36f;
+        }
+        .head-content span {
+            float: right;
+            color: #7a4624;
+        }
+        .head-content img {
+            float: left;
+        }
+        .content {
+            width: 960px;
+            margin: 16px auto 0 auto;
+        }
+        .content-left, .content-right {
+            float: left;
+        }
+        .content-left {
+            width: 640px;
+            margin-right: 16px;
+        }
+        .content-right {
+            width: 304px;
+        }
+        .left-item {
+            background: #fff;
+            margin-bottom: 16px;
+            padding: 18px 20px;
+        }
+        .user-info {
+
+        }
+        .user-info .logo {
+            width: 35px;
+            height: 35px;
+            border-radius: 100%;
+        }
+        .user-info .name {
+            position: relative;
+            top: -10px;
+            margin-left: 8px;
+            color: #9b8878;
+        }
+        .user-info .age {
+            position: relative;
+            display: inline-block;
+            width: 22px;
+            height: 16px;
+            padding-left: 12px;
+            background-image: url("./image/nearby.png");
+            background-size: 100% 100%;
+            vertical-align: 8px;
+            margin-left: 10px;
+        }
+        .age span {
+            position: absolute;
+            right: 5px;
+            font-size: 9px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <div class="head-content">
+            <img src="./image/logo2016.png" alt="">
+            <ul class="clearfix">
+                <li class="selected"><a href="">热门</a></li>
+                <li><a href="">热门</a></li>
+                <li><a href="">热门</a></li>
+                <li><a href="">热门</a></li>
+                <li><a href="">热门</a></li>
+                <li><a href="">热门</a></li>
+                <li><a href="">热门</a></li>
+            </ul>
+            <span>登录</span>
+        </div>
+    </div>
+    <div class="content clearfix">
+        <div class="content-left">
+            <div class="left-item">
+                <p class="user-info"><img class="logo" src="./image/people.png" alt=""><span class="name">流浪的贝贝</span><span class="age"><span>21</span></span></p>
+                <p class="news-content">有位同事曾出过严重的车祸，先被迎面开来的车撞飞，飞到马路另一侧又被迎面飞驰的车撞飞，落在人行道的一美女脚下，但他还是被抢救过来了，现在与常人无异，聊天时有人问起他车祸时的感觉，他说:"第一次被撞飞，感觉自己就象一皮球，被撞第二次，就想知道自己到底能被撞几次，落到地上看见自己头顶有一把奇怪布伞罩着，这布伞有两根雪白的伞柄。也许是这把怪伞救了我!"大家听了呵呵笑起来，纷纷说:"你是飞到人家姑娘裙底下了!"</p>
+            </div>
+            <div class="left-item">
+                <p class="user-info"><img class="logo" src="./image/people.png" alt=""><span class="name">流浪的贝贝</span><span class="age"><span>21</span></span></p>
+                <p class="news-content">有位同事曾出过严重的车祸，先被迎面开来的车撞飞，飞到马路另一侧又被迎面飞驰的车撞飞，落在人行道的一美女脚下，但他还是被抢救过来了，现在与常人无异，聊天时有人问起他车祸时的感觉，他说:"第一次被撞飞，感觉自己就象一皮球，被撞第二次，就想知道自己到底能被撞几次，落到地上看见自己头顶有一把奇怪布伞罩着，这布伞有两根雪白的伞柄。也许是这把怪伞救了我!"大家听了呵呵笑起来，纷纷说:"你是飞到人家姑娘裙底下了!"</p>
+            </div>
+            <div class="left-item">
+                <p class="user-info"><img class="logo" src="./image/people.png" alt=""><span class="name">流浪的贝贝</span><span class="age"><span>21</span></span></p>
+                <p class="news-content">有位同事曾出过严重的车祸，先被迎面开来的车撞飞，飞到马路另一侧又被迎面飞驰的车撞飞，落在人行道的一美女脚下，但他还是被抢救过来了，现在与常人无异，聊天时有人问起他车祸时的感觉，他说:"第一次被撞飞，感觉自己就象一皮球，被撞第二次，就想知道自己到底能被撞几次，落到地上看见自己头顶有一把奇怪布伞罩着，这布伞有两根雪白的伞柄。也许是这把怪伞救了我!"大家听了呵呵笑起来，纷纷说:"你是飞到人家姑娘裙底下了!"</p>
+            </div>
+            <div class="left-item">
+                <p class="user-info"><img class="logo" src="./image/people.png" alt=""><span class="name">流浪的贝贝</span><span class="age"><span>21</span></span></p>
+                <p class="news-content">有位同事曾出过严重的车祸，先被迎面开来的车撞飞，飞到马路另一侧又被迎面飞驰的车撞飞，落在人行道的一美女脚下，但他还是被抢救过来了，现在与常人无异，聊天时有人问起他车祸时的感觉，他说:"第一次被撞飞，感觉自己就象一皮球，被撞第二次，就想知道自己到底能被撞几次，落到地上看见自己头顶有一把奇怪布伞罩着，这布伞有两根雪白的伞柄。也许是这把怪伞救了我!"大家听了呵呵笑起来，纷纷说:"你是飞到人家姑娘裙底下了!"</p>
+            </div>
+            <div class="left-item">
+                <p class="user-info"><img class="logo" src="./image/people.png" alt=""><span class="name">流浪的贝贝</span><span class="age"><span>21</span></span></p>
+                <p class="news-content">有位同事曾出过严重的车祸，先被迎面开来的车撞飞，飞到马路另一侧又被迎面飞驰的车撞飞，落在人行道的一美女脚下，但他还是被抢救过来了，现在与常人无异，聊天时有人问起他车祸时的感觉，他说:"第一次被撞飞，感觉自己就象一皮球，被撞第二次，就想知道自己到底能被撞几次，落到地上看见自己头顶有一把奇怪布伞罩着，这布伞有两根雪白的伞柄。也许是这把怪伞救了我!"大家听了呵呵笑起来，纷纷说:"你是飞到人家姑娘裙底下了!"</p>
+            </div>
+            <div class="left-item">
+                <p class="user-info"><img class="logo" src="./image/people.png" alt=""><span class="name">流浪的贝贝</span><span class="age"><span>21</span></span></p>
+                <p class="news-content">有位同事曾出过严重的车祸，先被迎面开来的车撞飞，飞到马路另一侧又被迎面飞驰的车撞飞，落在人行道的一美女脚下，但他还是被抢救过来了，现在与常人无异，聊天时有人问起他车祸时的感觉，他说:"第一次被撞飞，感觉自己就象一皮球，被撞第二次，就想知道自己到底能被撞几次，落到地上看见自己头顶有一把奇怪布伞罩着，这布伞有两根雪白的伞柄。也许是这把怪伞救了我!"大家听了呵呵笑起来，纷纷说:"你是飞到人家姑娘裙底下了!"</p>
+            </div>
+            <div class="left-item">
+                <p class="user-info"><img class="logo" src="./image/people.png" alt=""><span class="name">流浪的贝贝</span><span class="age"><span>21</span></span></p>
+                <p class="news-content">有位同事曾出过严重的车祸，先被迎面开来的车撞飞，飞到马路另一侧又被迎面飞驰的车撞飞，落在人行道的一美女脚下，但他还是被抢救过来了，现在与常人无异，聊天时有人问起他车祸时的感觉，他说:"第一次被撞飞，感觉自己就象一皮球，被撞第二次，就想知道自己到底能被撞几次，落到地上看见自己头顶有一把奇怪布伞罩着，这布伞有两根雪白的伞柄。也许是这把怪伞救了我!"大家听了呵呵笑起来，纷纷说:"你是飞到人家姑娘裙底下了!"</p>
+            </div>
+        </div>
+        <div class="content-right"></div>
+    </div>
+</body>
+</html>
