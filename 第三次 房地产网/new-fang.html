@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>[房地产门户|房地产网]-房天下</title>
+	<script type="text/javascript" src="./js/jquery-3.2.0.min.js"></script>
+	<style type="text/css">
+	html,body,ul,li,a,p{
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		font-size: 12px;
+        font-family: "Microsoft Yahei";
+	}
+	 a {
+        text-decoration: none;
+        color: #fff;
+        }
+    .clearfix::after{
+    	display: block;
+       content: "";
+       height: 0;
+       clear:both;
+    }
+	.head{
+		width: auto;
+		height: 50px;
+		background-image: url(./images/newgif.gif);
+		background-position: 0 -666px;
+	}
+	.bar{
+		width: 1200px;
+		height: 50px;
+		margin: 0 auto;
+	}
+	.new-bar{
+		position: relative;
+	    padding: 0 9px;
+	    height: 35px;
+	    text-align: center;
+	    float: left;
+	    padding-top: 15px;
+	    font-size: 14px;
+	    color: #fff;
+	}
+	.triangle{
+		position: absolute;
+		left: 50%;
+		margin-left: -4px;
+		border-top: 8px solid #b30000;
+		border-right: 8px solid #b30000;
+		border-left: 8px solid #b30000;
+		border-bottom: 8px solid #fff;
+		display: none;
+	}
+	.new-bar:hover{
+		background-color: #b30000;
+	}
+	.inform{
+		float: right;
+		widows: 128px;
+		height: 32px;
+		padding: 9px 0 0 3px;
+	}
+	.register, .login{
+		float: right;
+	}
+	.devided{
+	    height: 35px;
+	    text-align: center;
+	    float: right;
+	    padding-top: 15px;
+	    font-size: 14px;
+	    color: #fff;
+	}
+	.look-house{
+		float: right;
+		padding-top: 15px;
+		font-size: 14px;
+		line-height: 22px;
+	}
+	.look-house>a{
+		display: inline-block;
+		margin: 0 5px;
+	}
+	.look-house>a>li{
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		margin: -5px 5px 0 0; 
+		background-image: url(./images/icon-dingd.png);
+		background-position: 0 -16px;
+		vertical-align: middle;
+	}
+   .city{
+		width: 470px;
+        padding: 5px 10px;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        border: 1px solid #b2b2b2;
+        background-color: #fff;
+        display: none;
+        z-index: 2;
+	}
+	.city a{
+		float: left;
+        width: 48px;
+        padding: 4px 8px;
+        color: #666;
+        text-align: left;
+        font-size: 12px;
+		text-decoration: none;
+	}
+	.city a:hover{
+		color: #c00;
+	}
+	.new-house{
+		position: absolute;
+		top: 50px;
+        left: 0;
+		list-style: none;
+		padding: 5px 0;
+        font-size: 12px;
+        background-color: #fff;
+        display: none;
+        z-index: 2;
+	}
+	.new-house li{
+		width: 120px;
+	    height: 26px;
+	    line-height: 26px;
+	    text-align: left;
+	    padding: 0 10px;
+	}
+	.new-house li a{
+		width: 120px;
+        padding: 4px 8px;
+        color: #666;
+        text-align: left;
+        font-size: 12px;
+		text-decoration: none;
+		font-family: "瀹嬩綋";
+	}
+	.new-house li a:hover{
+		color: #c00;
+	}
+	.find-house{
+		width: 120px;
+		height: 34px;
+		float: left;
+		line-height: 34px;
+		background: url(./images/newgif.gif);
+		background-position: 0 -732px;
+		font-size: 12px;
+		text-align: center;
+		color: #fff;
+		font-family: "Microsoft Yahei";
+	}
+	.content{
+		position: relative;
+		width: 100%;
+		height: 464px;
+		background-repeat: no-repeat;
+		/*background-image: url("./images/red-adv.jpg");
+		background-position: -350px 0;*/
+	}
+	.turnleft{
+		
+	}
+	.content-img>img{
+		width: 2000px;
+		height: 464px;
+		position: absolute;
+		left: 50%;
+		margin-left: -1000px;
+		overflow: hidden;
+		z-index: 1;
+	}
+	.changp{
+		width: 50px;
+		position: absolute;
+		left: 50%;
+		margin-left: -25px;
+		bottom: 20px;
+		z-index: 3;
+	}
+	.changed{
+		float: left;
+		width: 15px;
+		height: 15px;
+		margin: 0 5px;
+		border-radius: 50%;
+		background-color: #fff;
+	}
+	.changp1{
+		background-color: #000;
+	}
+	.middle{
+		position: absolute;
+		top: 105px;
+		left: 300px;
+		width: 720px;
+		height: 200px;
+		padding: 40px 0 0 40px;
+		color: #fff;
+		text-align: left;
+		background: url(./images/index.png) no-repeat;
+		margin: 0 auto;
+		z-index: 999;
+	}
+	.middle-top{
+        width: 720px;
+		height: 54px;
+	}
+	.middle-top-fang{
+		float: left;
+		width: 220px;
+		height: 54px;
+		background: url(./images/indexfang.png) no-repeat;
+		background-position: 0 7px;
+	}
+	.middle-top-right{
+		float: left;
+		height: 24px;
+		padding-top: 22px;
+		font-size: 14px;
+		color: #fff;
+	}
+	.middle-bar{
+		margin-top: 20px;
+	}
+	.check{
+		float: left;
+		height: 26px;
+		padding: 0 10px;
+		font-size: 15px;
+		color: #fff;
+		text-align: center;
+	}
+	.check:hover{
+		background: #c00;
+		color: #fff;
+		border-radius: 3px;
+	}
+	.find-text{
+		float: left;
+		margin:10px 0; 
+		width: 510px;
+		height: 33px;
+	}
+	.find-img{
+		float: left;
+		margin:10px 0; 
+		width: 60px;
+		height: 40px;
+		background-image: url(./images/newgif.gif);
+		background-position: 0 -285px;
+	}
+	.tool{
+		width: 100%;
+		border-bottom: 1px solid #ddd;
+		padding: 23px 0;
+		margin-bottom: 10px;
+	}
+	.newtool{
+		width: 1200px;
+		height: 54px;
+		margin: 0 auto;
+	}
+	.use-left{
+		float: left;
+		padding: 0 10px;
+		border-right: 1px dashed rgba(0,0,0,0.3);
+	}
+	.tool-bl{
+		float: left;
+		width: 80px;
+		height: 54px;
+		line-height: 54px;
+		font-size: 28px;
+		color: #c00;
+	}
+	.tool-br{
+        float: left;
+		line-height: 27px;
+		font-size: 14px;
+	}
+	.tool-br>p>a{
+		display: inline-block;
+		float: left;
+		color: #333;
+	}
+	.tool-br>p>a:hover{
+		text-decoration: underline;
+    	color: #c00;
+	}
+	.s1{
+		margin-right: 48px;
+	}
+	.s2{
+		margin-right: 20px;
+	}
+	.laybox{
+		width: 1200px;
+		overflow: hidden;
+		z-index: 2;
+		margin: 0 auto;
+		background-color: #fff;
+	}
+	.tetit{
+		width: 1198px;
+		height: 46px;
+		border-left: 1px solid #ddd;
+		border-right: 1px solid #ddd;
+	}
+	/*.hot{
+		float: left;
+		width: 398px;
+		text-align: center;
+		border-top: 2px solid #c00;
+		font-size: 18px;
+		font-weight: bold;
+		height: 44px;
+		line-height: 44px;
+		border-bottom: 1px solid #fff;
+		border-right: 1px solid #ddd;
+		background: #fff;
+	}
+	.hot a{
+		text-decoration: none;
+		display: block;
+		width: 398px;
+		color: #333;
+	}*/
+	.tetit>div{
+		float: left;
+		width: 398px;
+		text-align: center;
+		height: 43px;
+		line-height: 43px;
+		border-bottom: 1px solid #ddd;
+		border-top: 2px solid #ddd;
+		font-size: 18px;
+		cursor: pointer;
+		background: #f1f1f1;
+		border-right: 1px solid #ddd;
+	}
+	/*.hot:hover, .pinpai:hover, .quancheng:hover{
+		border-top: 2px solid #c00;
+		font-weight: bold;
+		height: 44px;
+		line-height: 44px;
+		border-bottom: 0;
+		background: #fff;
+	}*/
+	.tetit .hotpq{
+		border-top: 2px solid #c00;
+		font-weight: bold;
+		height: 44px;
+		line-height: 44px;
+		border-bottom: 0;
+		background: #fff;
+	}
+	.tetit>div a{
+		color: #333;
+	}
+	.hide{
+		display: none;
+	}
+	</style>
+</head>
+<body>
+<div class="head">
+	<div class="bar">
+		<div class="new-bar nationwide">
+		    <a href="#">全国
+		     	<img src="./images/navicon.gif">
+		    </a>
+		    <div class="triangle triangle1"></div>
+		     <div class="city">
+			    <a href="#">北京</a>
+			    <a href="#">北京</a>
+			    <a href="#">北京</a>
+			    <a href="#">北京</a>
+			    <a href="#">北京</a>
+			    <a href="#">北京</a>
+			    <a href="#">北京</a>
+			    <a href="#">北京</a>
+			    <a href="#">北京</a>
+			    <a href="#">北京</a>
+			    <a href="#">北京</a>
+			    <a href="#">北京</a>
+			    <a href="#">北京</a>
+			    <a href="#">北京</a>
+			    <a href="#">北京</a>
+			    <a href="#">北京</a>
+			    <a href="#">北京</a>
+			    <a href="#">北京</a>
+			    <a href="#">北京</a>
+			    <a href="#">北京</a>
+			    <a href="#">北京</a>
+			    <a href="#">北京</a>
+			    <a href="#">北京</a>
+			</div>
+		</div>
+		<div class="new-bar home">
+	        <a href="#">首页</a>
+        </div>
+        <div class="new-bar house">
+	        <a href="#">新房</a>
+	        <div class="triangle triangle2"></div>
+	        <ul class="new-house new-house2">
+	    		<li><a href="#">本月开盘</a></li>
+	    		<li><a href="#">本月开盘</a></li>
+	    		<li><a href="#">本月开盘</a></li>
+	    		<li><a href="#">本月开盘</a></li>
+	    		<li><a href="#">本月开盘</a></li>
+	    		<li><a href="#">本月开盘</a></li>
+	    		<li><a href="#">本月开盘</a></li>
+	    		<li><a href="#">本月开盘</a></li>
+	    		<li><a href="#">本月开盘</a></li>
+	    		<li><a href="#">本月开盘</a></li>
+	    		<li><a href="#">本月开盘</a></li>
+	    		<li><a href="#"> 
+	    		        <div class="find-house">帮你找房</div>
+	    		    </a>
+	    		</li>
+	    	</ul>
+	    </div>
+	    <div class="new-bar second-house">
+	    	<a href="#">二手房</a>
+	    	<div class="triangle triangle3"></div>
+	    	 <ul class="new-house second-house3 ">
+	    		<li><a href="#">在售房源</a></li>
+	    		<li><a href="#">优选房源</a></li>
+	    		<li><a href="#">房天下直销</a></li>
+	    		<li><a href="#">找小区</a></li>
+	    		<li><a href="#">找别墅</a></li>
+	    		<li><a href="#">差成交</a></li>
+	    		<li><a href="#">二手房排行榜</a></li>
+	    		<li><a href="#">购房知识</a></li>
+	    		<li><a href="#"> 
+	    		        <div class="find-house">我要买房</div>
+	    		    </a>
+	    		</li>
+	    	</ul>
+	    </div>
+	    <div class="new-bar renting">
+	    	<a href="#">租房</a>
+	    </div>
+	    <div class="new-bar price">
+	    	<a href="#">查房价</a>
+	    </div>
+	    <div class="new-bar ">
+	    	<a href="#">装修家居</a>
+	    </div>
+	    <div class="new-bar home">
+	    	<a href="#">写字楼</a>
+	    </div>
+	    <div class="new-bar home">
+	    	<a href="#">商铺</a>
+	    </div>
+	    <div class="new-bar home">
+	    	<a href="#">业主论坛</a>
+	    </div>
+	    <div class="new-bar home">
+	    	<a href="#">房产百科</a>
+	    </div>
+	    <div class="new-bar home">
+	    	<a href="#">移动APP</a>
+	    </div>
+	    <div class="new-bar home">
+	    	<a href="#">更多</a>
+	    </div>
+	    <div class="inform">
+	    	<a href="#"><img src="./images/12377.jpg"></a>
+	    </div>
+	    <div class="new-bar register">
+	    	<a href="#">注册</a>
+	    </div>
+	    <div class="devided">
+	    	<span>|</span>
+	    </div>
+	    <div class="new-bar login">
+	    	<a href="#">登录</a>
+	    </div>
+	    <div class="look-house">
+	    	<a href="#"><li></li>订单</a>
+	    </div>
+	    <div class="look-house">
+	    	<a href="#"><li></li>看房</a>
+	    </div>
+	</div>
+</div>
+<div class="content">
+    <a href="#" class="turnleft"></a>
+    <div class="content-img" >
+    	<img src="./images/red-adv.jpg" class="pp">
+        <img src="./images/white-adv.jpg" class="hide pp">
+    </div>    
+    <div class="changp">
+    	<div class="changp1 changed"></div>
+    	<div class="changp2 changed"></div>
+    </div>
+	<div class="middle">
+		<div class="middle-top clearfix">
+			<div class="middle-top-fang"></div>
+			<div class="middle-top-right">
+			全国【<a href="#">切换城市</a>】
+			</div>
+		</div>
+		<div class="middle-bar clearfix">
+			<div class="check c1"><a>查房价</a></div>
+			<div class="check c2"><a>查房价</a></div>
+			<div class="check c3"><a>查房价</a></div>
+			<div class="check c4"><a>查房价</a></div>
+			<div class="check c5"><a>查房价</a></div>
+			<div class="check c6"><a>查房价</a></div>
+			<div class="check c7"><a>查房价</a></div>
+			<div class="check c8"><a>查房价</a></div>
+			<div class="check c9"><a>更多<img src="./images/navicon.gif"></a></div>
+		</div>
+		<div class="find clearfix">
+		<input type="text" name="fname" class="find-text">
+		<div class="find-img"></div>
+		</div>
+	</div>
+</div>
+<div class="tool clearfix">
+	<div class="newtool">
+	    <div class="use-left">
+		   <div class="tool-bl">买房</div>
+			<div class="tool-br">
+				<p>
+					<a href="#" class="s1">新房</a>
+					<a href="#">二手房</a>
+				</p>
+				<p>
+					<a href="#" class="s2">新房房源</a>
+					<a href="#">业主论坛</a>
+				</p>
+			</div>
+		</div>
+		<div class="use-left">
+		   <div class="tool-bl">买房</div>
+			<div class="tool-br">
+				<p>
+					<a href="#" class="s1">新房</a>
+					<a href="#">二手房</a>
+				</p>
+				<p>
+					<a href="#" class="s2">新房房源</a>
+					<a href="#">业主论坛</a>
+				</p>
+			</div>
+		</div>
+		<div class="use-left">
+		   <div class="tool-bl">买房</div>
+			<div class="tool-br">
+				<p>
+					<a href="#" class="s1">新房</a>
+					<a href="#">二手房</a>
+				</p>
+				<p>
+					<a href="#" class="s2">新房房源</a>
+					<a href="#">业主论坛</a>
+				</p>
+			</div>
+		</div>
+		<div class="use-left">
+		   <div class="tool-bl">买房</div>
+			<div class="tool-br">
+				<p>
+					<a href="#" class="s1">新房</a>
+					<a href="#">二手房</a>
+				</p>
+				<p>
+					<a href="#" class="s2">新房房源</a>
+					<a href="#">业主论坛</a>
+				</p>
+			</div>
+		</div>
+		<div class="use-left">
+		   <div class="tool-bl">买房</div>
+			<div class="tool-br">
+				<p>
+					<a href="#" class="s1">新房</a>
+					<a href="#">二手房</a>
+				</p>
+				<p>
+					<a href="#" class="s2">新房房源</a>
+					<a href="#">业主论坛</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="laybox clearfix">
+	<div class="tetit clearfix">
+		<div class=" hpq hotpq">
+			<a href="#">热销楼盘</a>
+		</div>
+		<div class=" hpq">
+			<a href="#">品牌地产</a>
+		</div>
+		<div class=" hpq">
+			<a href="#">全城好房</a>
+		</div>
+	</div>
+	<div class="photo">
+		<div class="photos">
+			楼盘热销<img src="./images/hot1.jpg">
+		</div>
+		<div class="photos hide">
+			品牌地产<img src="./images/hot2.jpg">
+		</div>
+		<div class="photos hide">
+			全城好房<img src="./images/hot3.jpg">
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		$(".nationwide").mouseover(function(){
+			$(".city").show();
+			$(".triangle1").show();
+		})
+		$(".nationwide").mouseout(function(){
+			$(".city").hide();
+			$(".triangle1").hide();
+		})
+		$(".house").mouseover(function(){
+			$(".new-house2").show();
+			$(".triangle2").show();
+		})
+		$(".house").mouseout(function(){
+			$(".new-house2").hide();
+			$(".triangle2").hide();
+		})
+		$(".second-house").mouseover(function(){
+			$(".second-house3").show();
+			$(".triangle3").show();
+		})
+		$(".second-house").mouseout(function(){
+			$(".second-house3").hide();
+			$(".triangle3").hide();
+		})
+		$(".hpq").mouseover(function(){
+			$(this).addClass("hotpq").siblings().removeClass("hotpq");
+			var index = $(this).index();
+			$(".photos").eq(index).show().siblings().hide();
+		})
+		$(".changed").mouseover(function(){
+			$(this).addClass("changp1").siblings().removeClass("changp1");
+			var index = $(this).index();
+			$(".content-img>img").eq(index).show().siblings().hide();
+		})
+	})
+</script>	
+</body>
+</html>

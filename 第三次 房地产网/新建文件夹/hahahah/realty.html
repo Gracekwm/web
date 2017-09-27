@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>【房地产门户|房地产网】</title>
+	<script type="text/javascript" src="../js/jquery-3.2.0.min.js"></script>
+	<style>
+        body,html,div,a,ul,li,span,img {
+        	margin: 0;
+        	padding: 0;
+        }
+        body {
+        	font-size: 12px;
+        	font-family: "Microsoft Yahei";
+        }
+        a {
+        	text-decoration: none;
+        	color: #fff;
+        }
+        .nav {
+        	width: 100%;
+        	height: 50px;
+        	background-color: #CA0000;
+        	border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        .nav-top {
+        	position: relative;
+        	width: 1200px;
+        	margin: 0 auto;
+        	height:45px;
+        }
+        .nav-top ul , .middle-find ul {
+        	list-style: none;   
+        	position: relative;     	
+        }
+        .nav-top ul li {
+        	float:left;
+        	line-height: 45px;       	
+        	padding: 5px 10px;
+        }
+        .nav-top ul li:hover {
+        	background-color: #b00002;
+        }
+        .nav-top ul li a {
+        	display: inline-block;
+        	font-size: 14px;
+        	text-align: center;
+        	line-height: 25px;	
+        }
+        .img-navicon img ,.img-more img{
+        	margin-left: 3px;
+        }
+        .img-more img {
+        	position: relative;
+        	top: -2px;
+        }
+        .img-more .more-hover {
+        	position: absolute;
+        	display: none;
+        	right: -62px;
+        	margin-top: 3px;
+        	width: 144px;
+        	height: 170px;
+        	z-index: 999;
+        	color: #000;
+        	border-radius: 3px;
+        	background-color: #fff;
+        }
+        .img-more .more-hover li {
+        	width: 122px;
+        	height:14px;
+        	line-height: 14px;
+        	padding-left: 13px;        	
+        }
+        .img-more .more-hover li a {
+        	color: #333;
+            font-size: 12px;
+        }
+        .img-more .more-hover li a:hover {
+        	color: red;
+        }
+        .img-more .more-hover li:hover {
+        	background-color: #fff;
+        	width: 120px;
+        }
+        .nav-top ul .img-seeroom {
+        	margin-left:35px;
+        }
+         .nav-top ul .img-order:hover {
+        	background-color: #CA0000;
+        }
+        .nav-top ul .img-report:hover {
+            background-color: #CA0000;
+        }
+        .nav-top ul .img-seeroom:hover {
+            background-color: #CA0000;
+        }
+        .img-seeroom span,.img-order span {
+        	position: relative;
+        	top: 3px;
+        	right: 4px;
+        	display: inline-block;
+        	width: 16px;
+        	height: 16px;
+        	background-image: url("../image/icon-dingd.png");
+        	background-repeat: no-repeat;
+        }
+        .img-seeroom span {        	
+        	background-position: 0 0;
+        }
+        .img-order span {
+        	background-position: 0 -16px;
+        }
+        .nav-top ul .nav-enter:after{
+        	display:inline-block;
+        	width: 1px;
+        	height: 25px;
+        	position: relative;
+        	top: 8px;
+        	left:9px;
+        	background-color: #fff;
+        	content:""; 
+        }
+        .nav-top .enter-hover {
+        	position: absolute;
+        	display: none;
+        	width: 90px;
+        	height:83px;
+        	box-shadow: 2px 1px 3px #B7E2F3;
+        	z-index: 999;
+        	right:170px;
+        	background-color: #fff;	
+        }
+        .nav-top .enter-hover img {
+        	position: absolute;
+        	left: 20px;
+        	top: -9px;
+        	z-index: 999;
+        }
+        .nav-top .enter-hover li {
+        	width: 70px;
+        	height:22px;
+        	padding:4px 10px 0 10px;
+        	line-height:22px;        	
+        }
+        .nav-top .enter-hover a {
+        	color: #666;	
+        	font-size: 10px;
+        }
+        .enter-hover a:hover {
+        	color: #c00;
+        }
+        .nav-top .enter-hover li:hover {
+            background-color: #fff;           
+        }
+        .img-report {
+        	position: relative;
+        	width: 120px;
+        	height: 32px;
+        	top: 4px;
+        }
+        .header {
+        	position: relative;
+        	width: 100%;
+        	height: 464px;
+        }
+        .header>a {
+        	display: block;        	
+        	height: 464px;
+        	background-size: cover;
+        	width: 100%;
+        	height: 100%;
+        	vertical-align: top;
+        	background-repeat: no-repeat;
+        	background-image: url("../image/header.jpg");
+        	background-position:-350px 0;
+        }
+        .middle-header {
+        	position: absolute;
+        	top: 120px;
+        	left:305px;
+        	width: 660px;
+        	height: 160px;
+        	padding: 20px 30px;
+        	border-radius: 5px;
+        	background-color: #410306;
+        }
+        .middle-logo  {
+        	width:650px;
+        	height: 54px;
+        }
+        .middle-text {
+        	width:650px;
+        	height: 42px;
+        }
+        .middle-logo>a,.middle-logo span {
+        	float: left;
+        	display: block;
+            padding-left:5px;
+        }
+        .middle-logo span {
+        	position: relative;
+        	top: 22px;
+        	color: #fff;
+        	font-size: 15px;
+        }
+        .middle-logo span  a:hover {
+        	text-decoration: underline;
+        }
+        .img-logo {
+        	display: block;
+        	width: 213px;
+        	height: 40px;
+        	background-image: url("../image/slogo.png");
+        	background-position: 0 7px;
+        	background-repeat: no-repeat;
+        }
+        .middle-find ,.middle-text {
+        	margin-top: 10px;
+        	position: relative;
+        }
+        .middle-find ul {
+        	height: 30px;
+        }
+        .middle-find ul li {
+        	display: inline-block;
+        	height: 25px;
+        	line-height:25px;
+        	border-radius: 3px;
+        	float: left;
+        	font-size: 15px;
+        	padding: 5px 9px;
+        }
+        .middle-find ul .img-more:hover {
+            background-color: #400406;
+        }
+        .middle-find ul li:hover {
+        	border-radius: 3px;
+        	background-color: #CC0000;
+        }
+        .middle-text span ,.middle-text a {
+        	float: left;
+        	display: inline-block;
+        	line-height: 42px;
+        }
+        .middle-text span {
+        	width: 590px;
+        	height: 40px;
+        	background-color: #fff;
+        }
+        .middle-text a {
+        	position: relative;
+        	top: -1.5px;
+        	width: 60px;
+        	height: 42px;
+        	border:none;
+        	background-image: url("../image/new.jpg");
+        	background-repeat: no-repeat;
+        	background-position: 0 -285px;
+        }
+        .middle-ad {
+        	position: relative;
+        	top: -60px;
+        	right: 90px;
+        	float: right;
+        	border-radius: 3px;
+        	text-align: center;
+            width:175px;
+            line-height: 28px;
+            height: 28px;
+            background-color: #460408;
+        }
+        .middle-ad a {
+            padding: 2px 0 ;
+        }
+        .middle-ad a:hover {
+        	text-decoration: underline;
+        }
+        .clearfix::after {
+        	display: block;
+        	height: 0;
+        	clear: both;
+        	content: "";
+        }
+        .ad-sell {
+        	width: 100%;
+            height:81px;
+            clear:both;
+            border-bottom: 1px solid rgba(0,0,0,0.1);          
+        }
+        .content-sell {
+            width: 1200px;
+            height: 60px;
+        	margin: 20px auto;
+        }
+        .housebox {
+            width: 1200px;
+            height: 50px;
+            margin:20px auto;
+        }
+        .content-buy ,.content-out ,.content-room ,.content-finish ,.content-direct {
+        	float: left;
+        	height: 60px;
+        	display: inline-block;
+        	border-right: 1px dashed rgba(0,0,0,0.2);
+        }
+        .content-buy {
+        	width: 250px;
+        }
+        .content-out {
+        	width: 180px;
+            margin-left: 13px;
+        }
+        .content-room {
+            width: 250px;
+            margin-left: 13px;
+        }
+        .content-finish {
+            width: 231px;
+            margin-left: 13px;
+        }
+        .content-direct {
+            width: 231px;
+            margin-left: 13px;
+        }
+        .left ,.right ,.left-next,.right-next ,.left-last ,.right-last {
+        	display: inline-block;
+        	float: left;
+        }
+        .left {
+            width: 100px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            color: red;
+            padding-right:8px;
+            font-size: 30px;
+        }
+        .left-next {
+        	width: 100px;
+            text-align: center;
+            line-height: 60px;
+            color: red;
+            padding-right:8px;
+            font-size: 30px;
+        }
+        .left-last {
+        	width: 100px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            color: red;
+            padding-right:8px;
+            font-size: 30px;
+        }
+        .right-last {
+        	width: 72px;
+            height: 60px;
+        }
+        .right-next {
+            width: 122px;
+            height: 60px;
+        }
+        .right {
+            width: 142px;
+            height: 60px;
+        }
+        .right-next a:hover ,.right a:hover ,.right-last a:hover {
+        	text-decoration: underline;
+        	color: red;
+        	overflow: hidden;
+        }
+        .right-next a {
+            display: inline-block;
+        	float: left;
+        	width: 61px;
+        	height: 30px;
+        	line-height: 30px;
+        	font-size: 14px;
+        	color:#333;
+        }
+        .right a {
+        	display: inline-block;
+        	float: left;
+        	width: 71px;
+        	height: 30px;
+        	line-height: 30px;
+        	font-size: 14px;
+        	color:#333;
+        }
+        .right-last a {
+        	display: inline-block;
+        	float: left;
+        	width: 72px;
+        	height: 30px;
+        	line-height: 30px;
+        	font-size: 14px;
+        	color:#333;
+        }
+        .box-left ,.box-middle ,.box-right {
+        	display: inline-block;
+        	float: left;
+            width: 398px;
+            height: 47px;
+            border: 1px solid #DDDDDD;
+            background-color: #F1F1F1;
+            border-top:2px solid #DDDDDD;
+        }
+        .box-left a ,.box-middle a ,.box-right a {
+        	display: block;
+        	text-align: center;
+        	line-height: 47px;
+        	color: #333;
+        	font-size: 18px;
+        }
+        .box-left a:hover ,.box-middle a:hover ,.box-right a:hover {
+        	font-weight: bold;
+        }
+        .box-left:hover ,.box-middle:hover ,.box-right:hover {
+        	border-top:2px solid red;
+        }
+        .hover-box {
+        	/*display: none;*/
+        	width: 1200px;
+        	height: 252px;
+        	margin: 10px auto;
+        }
+        .hover-box>div {
+        	display: inline-block;
+        	float: left;
+        	width: 259px;
+        	height: 232px;
+        	padding:10px 10px;
+        	border: 1px solid #ddd;
+        	border-radius: 1px;
+        }
+        .hover-left {
+        	margin-right: 24px;
+        }
+        .hover-left>div ,.hover-right>div {
+        	display: inline-block;
+        	border: 1px solid #ddd;
+        	float: left;
+        	width: 260px;
+        	height:230px;
+        }
+        .left-info ,.right-info {
+        	display: inline-block;
+        	float: left;
+        	width: 128px;
+        	height: 62px;
+        }
+        .right-info {
+        	background-image: url("../image/hottdbj.jpg");
+        	background-repeat: no-repeat;
+        }
+        .right-info span ,.hover-right span {
+        	display: block;
+        	font-weight: bold;
+        	font-size: 18px;
+        	color: #CC0000;
+        	text-align: center;
+        	line-height: 30px;
+        }
+        .hover-left a ,.hover-right a {
+        	display: block;
+        	text-align: center;
+        	font-weight: bold;
+        	font-size: 18px;
+        	color: #333;
+        	line-height: 30px;
+        }
+        .hover-left p ,.hover-right p {
+        	width: 129px;
+        	height: 20px;
+        	margin: 5px auto;
+        	color: #929292;
+            text-align: center;
+            overflow: hidden;
+        }
+        #enter-ho {
+            left: 520px;
+            height: 110px;
+            width:150px;
+        }
+        #enter-hover {
+            left: 595px;
+            height: 110px;
+            width:150px;            
+        }
+        #enter-act {
+            left:470px;
+            height: 90px;
+            width:115px;
+        }
+        #enter-write {
+        	left:410px;
+            height: 90px;
+            width:115px;
+        }
+        #enter-new {
+        	left:113px;
+            height:330px;
+            width:115px;
+        }
+        #enter-used {
+            left:162px;
+            height:252px;
+            width:115px;
+        }
+        #enter-rent {
+        	left: 224px;
+            height:252px;
+            width:115px;
+        }
+        #enter-home {
+        	left: 333px;
+            height:200px;
+            width:115px;
+        }
+        #enter-new .img-nav ,#enter-used .img-nav ,#enter-home .img-nav ,
+        #enter-rent .img-nav {
+        	position: relative;
+        	margin-top: 4px;
+        	width:87px;
+        	height: 32px;       	
+        	text-align: center;
+        	border-radius: 4px;
+        	background-repeat: no-repeat;
+        	background-position: 12px -732px;
+        	background-image: url("../image/newgif.jpg");        	       	
+        }
+        #enter-new .img-nav a ,#enter-used .img-nav a ,#enter-home .img-nav a ,
+        #enter-rent .img-nav a {
+        	display: block;
+        	line-height: 25px;       	
+        	width: 100px;
+        	font-weight: bold;
+        	text-align: center;
+        	color: #fff;
+        }
+        #enter-new .img-nav a:hover ,
+        #enter-used .img-nav a:hover ,
+        #enter-home .img-nav a:hover ,
+        #enter-rent .img-nav a:hover{
+        	color: #fff;
+        }
+        #enter-hover ,#enter-ho ,#enter-act ,#enter-new ,#enter-used ,#enter-home ,
+        #enter-rent ,#enter-write {        	
+        	z-index: 1999;
+        	display: none;
+        	position: absolute;       	        	
+        	box-shadow: 2px 1px 3px #B7E2F3;
+        	background-color:#fff;
+        }
+        #enter-hover img ,#enter-ho img {
+            left: 28px;
+        }
+        #enter-hover img ,#enter-ho img ,#enter-act img ,#enter-new img ,
+        #enter-used img ,#enter-home img ,#enter-rent img ,#enter-write img {
+        	position: absolute;        	
+        	top: -9px;
+        	z-index: 999;
+        }
+        #enter-used img {
+        	left: 21px;
+        }
+        #enter-new img ,#enter-rent img {
+        	left: 13px;
+        }
+        #enter-home img {
+        	left: 29px;
+        }
+        #enter-act img {
+            left: 19px;
+        }
+        #enter-write img {
+            left: 21px;
+        }
+        #enter-hover li ,#enter-ho li ,#enter-used li {
+        	width: 130px;
+        }
+        #enter-hover li ,#enter-ho li ,#enter-act li ,#enter-new li ,
+        #enter-used li ,#enter-home li ,#enter-rent li ,#enter-write li{
+        	display: block;        	
+        	height: 20px;
+        	padding: 4px 10px 2px 10px;
+        	line-height: 20px;
+        }
+        #enter-act li ,#enter-new li ,#enter-used li ,#enter-rent li ,#enter-write li {
+            width: 90px;
+        }
+        #enter-hover li:hover ,#enter-ho li:hover ,
+        #enter-act li:hover ,#enter-new li:hover ,
+        #enter-used li:hover ,#enter-home li:hover ,
+        #enter-rent li:hover ,#enter-write li:hover {
+        	background-color: #fff;
+        }
+        #enter-hover li a ,#enter-ho li a ,#enter-act li a ,#enter-new li a ,
+        #enter-used li a ,#enter-home li a ,#enter-rent li a ,#enter-write li a {
+        	color: #000;
+        	font-size: 12px;
+        }
+        #enter-hover li a:hover ,#enter-ho li a:hover ,
+        #enter-act li a:hover ,#enter-new li a:hover ,
+        #enter-used li a:hover ,#enter-home li a:hover ,
+        #enter-rent li a:hover ,#enter-write li a:hover {
+            color: #c00;
+        }
+	</style>
+</head>
+<body>
+	<div class="nav">
+	    <div class="nav-top">
+		<ul>
+			<li>
+			<a href="#" class="img-navicon">
+			全国
+			<img src="../image/navicon.jpg" alt="">
+			</a>
+			</li>
+			<li><a href="#">首页</a></li>
+			<li class="newroom"><a href="#">新房</a>
+                <ul id="enter-new">
+			    <img src="../image/navjt.jpg" alt="">
+			 	<li><a href="#">本月开盘</a></li>
+			 	<li><a href="#">热门楼盘</a></li>
+			 	<li><a href="#">新房房源</a></li>
+			 	<li><a href="#">房天下直销</a></li>
+			 	<li><a href="#">打折楼盘</a></li>
+			 	<li><a href="#">新开楼盘</a></li>
+			 	<li><a href="#">楼盘导购</a></li>
+			 	<li><a href="#">新房排行榜</a></li>
+			 	<li><a href="#">购房知识</a></li>
+			 	<li><a href="#">看房团</a></li>
+			 	<li><a href="#">商业地产</a></li>
+			 	<li class="img-nav"><a href="#">帮你找房</a></li>
+			    </ul>
+			</li>
+			<li class="used">
+			    <a href="#">二手房</a>
+                <ul id="enter-used">
+			    <img src="../image/navjt.jpg" alt="">
+			 	<li><a href="#">在售房源</a></li>
+			 	<li><a href="#">优选房源</a></li>
+			 	<li><a href="#">找小区</a></li>
+			 	<li><a href="#">房天下直销</a></li>
+			 	<li><a href="#">打折楼盘</a></li>
+			 	<li><a href="#">查成交</a></li>
+			 	<li><a href="#">楼盘导购</a></li>
+			 	<li><a href="#">新房排行榜</a></li>
+			 	<li class="img-nav"><a href="#">帮你找房</a></li>
+			    </ul>
+			</li>
+			<li class="rent">
+			    <a href="#">租房</a>
+                <ul id="enter-rent">
+			    <img src="../image/navjt.jpg" alt="">
+			 	<li><a href="#">房天下精选</a></li>
+			 	<li><a href="#">个人房源</a></li>
+			 	<li><a href="#">整租房源</a></li>
+			 	<li><a href="#">合租房源</a></li>
+			 	<li><a href="#">别墅房源</a></li>
+			 	<li><a href="#">短租日租</a></li>
+			 	<li><a href="#">特价房</a></li>
+			 	<li><a href="#">租房知识</a></li>
+			 	<li class="img-nav"><a href="#">帮你找房</a></li>
+			    </ul>
+			</li>
+			<li><a href="#">查房价</a></li>
+			<li class="home">
+			    <a href="#">装修家居</a>
+			    <ul id="enter-home">
+			    <img src="../image/navjt.jpg" alt="">
+			 	<li><a href="#">免费装修报价</a></li>
+			 	<li><a href="#">找装饰公司</a></li>
+			 	<li><a href="#">装修日记</a></li>
+			 	<li><a href="#">装修效果图</a></li>
+			 	<li><a href="#">装修攻略</a></li>
+			 	<li><a href="#">装修咨询</a></li>
+			 	<li class="img-nav"><a href="#">帮你找房</a></li>
+			    </ul>
+			</li>
+			<li class="write">
+			    <a href="#">写字楼</a>
+                <ul id="enter-write">
+			    <img src="../image/navjt.jpg" alt="">
+			 	<li><a href="#">写字楼出租</a></li>
+			 	<li><a href="#">写字楼出售</a></li>
+			 	<li><a href="#">写字楼新盘</a></li>
+			    </ul>
+			</li>
+			<li class="shop"><a href="#">商店</a>
+                <ul id="enter-act">
+			    <img src="../image/navjt.jpg" alt="">
+			 	<li><a href="#">商铺出租</a></li>
+			 	<li><a href="#">商铺出售</a></li>
+			 	<li><a href="#">商铺新盘</a></li>
+			    </ul>
+			</li>
+			<li class="pana"><a href="#">业主论坛</a>
+                <ul id="enter-ho">
+			    <img src="../image/navjt.jpg" alt="">
+			 	<li><a href="#">精华帖</a></li>
+			 	<li><a href="#">购房圈</a></li>
+			 	<li><a href="#">业户活动</a></li>
+			 	<li><a href="#">装修论坛</a></li>
+			    </ul>
+			</li>
+			<li class="room">
+			    <a href="#">房产百科</a>
+                <ul id="enter-hover">
+			    <img src="../image/navjt.jpg" alt="">
+			 	<li><a href="#">房产快讯</a></li>
+			 	<li><a href="#">房产问答</a></li>
+			 	<li><a href="#">房产知识</a></li>
+			 	<li><a href="#">房产圈</a></li>
+			    </ul>
+			</li>
+			<li><a href="#">移动APP</a></li>
+			<li><a href="#">更多</a></li>
+			<li class="img-seeroom">
+			    <a href="#">
+			       <span></span>看房 
+			    </a>
+			</li>
+			<li class="img-order">
+			    <a href="#"
+                   <span></span>订单
+			    </a>
+			</li>
+			<li class="nav-enter">
+			<a href="#">登录</a>
+			 <ul class="enter-hover">
+			    <img src="../image/navjt.jpg" alt="">
+			 	<li><a href="#">我的房天下</a></li>
+			 	<li><a href="#">修房帮</a></li>
+			 	<li><a href="#">装修帮</a></li>
+			 </ul>
+			</li>
+			<li><a href="#">注册</a></li>
+			<li class="img-report">
+			<a href="#"><img src="../image/12377.jpg" alt="" ></a></li>
+		</ul>
+		</div>
+	</div>
+	<div class="header clearfix">
+		<a href="#"></a>
+		<div class="middle-header">
+			<div class="middle-logo">
+				<a href="#" class="img-logo"></a>
+				<span>全国
+				【<a href="#" class="middle-right">切换城市</a>】
+				</span>
+			</div>
+			<div class="middle-find">
+				<ul>
+					<li><a href="#">查房价</a></li>
+					<li><a href="#">买新房</a></li>
+					<li><a href="#">买二手房</a></li>
+					<li><a href="#">找租房</a></li>
+					<li><a href="#">装修家居</a></li>
+					<li><a href="#">房产快讯</a></li>
+					<li><a href="#">海外房产</a></li>
+					<li><a href="#">地图找房</a></li>
+					<li class="img-more">
+			            <a href="#" class="more-again">更多
+			            <img src="../image/navicon1.jpg" alt="" class="more-again">
+			            </a>
+			            <ul class="more-hover">
+			            	<li><a href="#">产权问答</a></li>
+			            	<li><a href="#">产权知识</a></li>
+			            	<li><a href="#">短租</a></li>
+			            	<li><a href="#">写字楼</a></li>
+			            	<li><a href="#">店铺</a></li>
+			            	<li><a href="#">业主论坛</a></li>
+			            	<li><a href="#">搜索店铺</a></li>
+			            </ul>
+			        </li>
+				</ul>
+			</div>
+			<div class="middle-text clearfix">
+				<span></span>
+				<a href="#"></a>
+			</div>
+		</div>	
+		<div class="middle-ad">
+		<a href="#">广告 顺鑫 颐和天景[顺义]</a>
+		</div> 
+	</div>
+	<div class="ad-sell">
+		<div class="content-sell">
+		 	<div class="content-buy">
+		 		<span class="left">买房</span>
+		 		<div class="right">
+		 			<a href="#">新房</a>
+		 			<a href="#">二手房</a>
+		 			<a href="#">新房房源</a>
+		 			<a href="#">业主论坛</a>
+		 		</div>
+		 	</div>
+		 	<div class="content-out">
+		 		<span class="left-last">卖房</span>
+		 		<div class="right-last">
+		 			<a href="#">新房房源</a>
+		 			<a href="#">业主论坛</a>
+		 		</div>
+		 	</div>
+		 	<div class="content-room">
+		 		<span class="left">租房</span>
+		 		<div class="right">
+		 			<a href="#">新房</a>
+		 			<a href="#">二手房</a>
+		 			<a href="#">新房房源</a>
+		 			<a href="#">业主论坛</a>
+		 		</div>
+		 	</div>
+		 	<div class="content-finish">
+		 		<span class="left-next">装修</span>
+		 		<div class="right-next">
+		 			<a href="#">新房</a>
+		 			<a href="#">二手房</a>
+		 			<a href="#">新房房源</a>
+		 			<a href="#">业主论坛</a>
+		 		</div>
+		 	</div>
+		 	<div class="content-direct">
+		 		<span class="left-next">直销</span>
+		 		<div class="right-next">
+		 			<a href="#">新房</a>
+		 			<a href="#">二手房</a>
+		 			<a href="#">新房房源</a>
+		 			<a href="#">业主论坛</a>
+		 		</div>
+		 	</div>
+		</div>
+	</div>
+	<div class="housebox">
+		<div class="box-left">
+		<a href="#">热销楼盘</a>
+		</div>
+		<div class="box-middle">
+		<a href="#">品牌地产</a>
+		</div>
+		<div class="box-right">
+		<a href="#">全城好房</a>
+		</div>
+	</div>
+	<div class="hover-box">
+		<div class="hover-left">
+			<div>
+				<a href="#"><img src="../image/hover1.jpg" alt=""></a>
+			       <div class="left-info">
+				   <a href="#">昌平</a>
+				   <p>北五环奥林别墅区</p>
+			    </div>
+			    <div class="right-info">
+				    <span>独栋别墅</span>
+				    <p>现房在售</p>
+			    </div> 
+			</div>
+		</div>
+		<div class="hover-left">
+			<div>
+				<a href="#"><img src="../image/hover2.jpg" alt=""></a>
+			       <div class="left-info">
+				   <a href="#">丰台</a>
+				   <p>西四环边</p>
+			    </div>
+			    <div class="right-info">
+				    <span>改善大选</span>
+				    <p>科技大宅</p>
+			    </div> 
+			</div>
+		</div>
+		<div class="hover-left">
+			<div>
+				<a href="#"><img src="../image/hover3.jpg" alt=""></a>
+			       <div class="left-info">
+				   <a href="#">国贸</a>
+				   <p>优选二手房</p>
+			    </div>
+			    <div class="right-info">
+				    <span>300-400万</span>
+				    <p>共11条房源</p>
+			    </div> 
+			</div>
+		</div>
+		<div class="hover-right">
+			<div>
+				<a href="#"><img src="../image/hover4.jpg" alt=""></a>
+			       <div class="left-info">
+				   <a href="#">红包等你来领</a>
+				   <p>全国25城联动</p>
+			    </div>
+			    <div class="right-info">
+				    <span>抽iPone8</span>
+				    <p>赢10000元现金</p>
+			    </div> 
+			</div>
+		</div>
+	</div>
+	<!-- <div class="navicon-make"></div> -->
+	<script type="text/javascript">
+	$(function(){
+        $(".img-more").mouseover(function(){
+        	$(".more-hover").show();
+        })
+        $(".img-more").mouseout(function(){
+        	$(".more-hover").hide();
+        })
+        $(".nav-enter").mouseover(function(){
+        	$(".enter-hover").show();
+        })
+        $(".nav-enter").mouseout(function(){
+        	$(".enter-hover").hide();
+        })
+        $(".room").mouseover(function(){
+        	$("#enter-hover").show();
+        })
+        $(".room").mouseout(function(){
+        	$("#enter-hover").hide();
+        })
+        $(".pana").mouseover(function(){
+        	$("#enter-ho").show();
+        })
+        $(".pana").mouseout(function(){
+        	$("#enter-ho").hide();
+        })
+        $(".shop").mouseover(function(){
+        	$("#enter-act").show();
+        })
+        $(".shop").mouseout(function(){
+        	$("#enter-act").hide();
+        })
+        $(".newroom").mouseover(function(){
+        	$("#enter-new").show();
+        })
+        $(".newroom").mouseout(function(){
+        	$("#enter-new").hide();
+        })
+        $(".used").mouseover(function(){
+        	$("#enter-used").show();
+        })
+        $(".used").mouseout(function(){
+        	$("#enter-used").hide();
+        })       
+        $(".rent").mouseover(function(){
+        	$("#enter-rent").show();
+        })
+        $(".rent").mouseout(function(){
+        	$("#enter-rent").hide();
+        })
+        $(".home").mouseover(function(){
+        	$("#enter-home").show();
+        })
+        $(".home").mouseout(function(){
+        	$("#enter-home").hide();
+        })
+        $(".write").mouseover(function(){
+        	$("#enter-write").show();
+        })
+        $(".write").mouseout(function(){
+        	$("#enter-write").hide();
+        })
+	})
+	</script>
+</body>
+</html>

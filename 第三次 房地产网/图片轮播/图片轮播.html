@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul,li {
+            margin: 0;
+            padding: 0;
+        }
+        .clearfix::after {
+            clear: both;
+            display: block;
+            content: "";
+            height: 0;
+        }
+        ul {
+            list-style: none;
+            width: 1500px;
+            margin-left: -300px;
+        }
+        ul>li, ul>li>img {
+            width: 300px;
+            height: 300px;
+        }
+        ul>li {
+            float: left;
+            line-height: 300px;
+            text-align: center;
+            font-size: 30px;
+        }
+        .box {
+            width: 300px;
+            height: 355px;
+            border: 1px solid red;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .left {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .right {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .box .small{
+            float: left;
+            height: 50px;
+            width: 300px;
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+        }
+        .box .small>div{
+            float: left;
+            width: 50px;
+            height: 50px;
+            margin: 0 3px;
+        }
+        .box .small>div>img{
+            height: 50px;
+            width: 50px;
+        }
+        .small div.selected{
+            border: 1px solid red;
+        }
+    </style>
+    <script src="../js/jquery-3.2.0.min.js"></script>
+</head>
+<body>
+    <div class="box">
+        <ul class="clearfix"> 
+            <li><img src="../images/hot2.jpg" alt=""></li>
+            <li><img src="../images/hot1.jpg" alt=""></li>
+            <li><img src="../images/hot3.jpg" alt=""></li>
+            <li><img src="../images/hot1.jpg" alt=""></li>
+            <li><img src="../images/hot3.jpg" alt=""></li>
+        </ul>
+        <button class="left">向左移动</button>
+        <button class="right">向右移动</button>
+        <div class="small">
+            <div><img src="../images/hot2.jpg" alt=""></div>
+            <div class="selected"><img src="../images/hot1.jpg" alt=""></div>
+            <div><img src="../images/hot3.jpg" alt=""></div>
+            <div><img src="../images/hot1.jpg" alt=""></div>
+            <div><img src="../images/hot3.jpg" alt=""></div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            var index = $(".box .small .selected").index();
+            $(".left").click(function(){
+                $("ul").stop(true,true).animate({
+                    marginLeft:"-=300px",
+                },500,function(){
+                    var first = $("li").first();
+                    var last = $("li").last();
+                    first.insertAfter(last);
+                    $("ul").css("margin-left","-300px");
+                })
+                if(index == 4){ index = -1; }
+                $(".small div").eq(index += 1).addClass("selected").siblings().removeClass("selected");
+            })
+            $(".right").click(function(){
+                $("ul").stop(true,true).animate({
+                    marginLeft:"+=300px",
+                },500,function(){
+                    var first =  $("li").first();
+                    var last = $("li").last();
+                    last.insertBefore(first);
+                    $("ul").css("marginLeft","-300px")
+                })
+                if(index == 0){ index =  5 ; }
+                $(".small div").eq(index -=1).addClass("selected").siblings().removeClass("selected");
+            })
+        })
+    </script>
+</body>
+</html>
