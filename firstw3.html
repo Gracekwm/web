@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8"><!--设置网页代码格式-->
+      <title>work1</title>
+      <style type="text/css">
+      html, body, a, ul, li, h1, h2, h3 {
+            margin: 0;
+            padding: 0;
+      }
+       .head, .top, .second, .foot{
+            width: 1021px;
+            margin: 0 auto;
+            font-family: '微软雅黑';
+            font-size: 14px;
+            
+      }
+      .school{
+            width: 372px;
+            height: 90px;
+            float: left;
+            background-image: url(./image/bg.png);
+            background-position: 0px -156px;
+      }
+      .school:hover{
+            background-image: url(./image/bg.png);
+            background-position: 0px -256px;
+      }
+      .adv{
+            width:631px; 
+            height:90px;
+            float:right;
+            background-color: purple;
+           
+
+
+      }
+      .clearfix::after{
+            display: block;
+            clear:both;
+            content: "";
+            height: 0;
+
+      }
+      .top{
+            background-color: #e8e7e3;
+            margin-top: 20px;
+            margin-bottom: 20px;
+      }
+      .top ul{
+            list-style: none;
+      }
+      .top ul li{
+            float: left;
+            font-size: 20px;
+            padding: 10px 10px;
+            background-color: #e8e7e3;
+      }
+      .top ul li.topli{
+            color: #ffffff;
+            background-color:#3f3f3f;
+      }
+      .top ul li:hover{
+             background-color:#3f3f3f;
+            color:#e8e7e3;
+       }
+       .top ul li a{
+            text-decoration: none;
+            color: #fff;
+       }
+       .top ul li a:hover{
+            color: #fff;
+
+       }
+       .redHTML{
+            color: #ffffff;
+            background-color: #BD2D30;
+       }
+       .left{
+            width: 178px;
+            /*height: 2000px;*/
+            float: left;
+            border:1px solid #e8e7e3;                                             
+       }
+       /*.left h1{
+            background-color:#e8e7e3;
+            text-align: center;
+            font-weight: 300;
+            font-size: 20px;
+            padding: 7px 10px;
+            margin: 0;
+      }*/
+      .course{
+            width: 178px;
+            height:36px;
+            background-image: url(./image/bg.png);
+            background-position: -1px -722px;
+       }
+       /*.course h2{
+            display: block;
+            font-size: 14px;
+            padding: 10px 0 5px 10px;
+       }*/
+       .courseh2{
+            display: block;
+            font-size: 14px;
+            padding: 10px 0 5px 10px;
+       }
+      .left ul {
+            list-style: none;
+            font-size: 12px;
+      }
+      .left ul a{
+            color:black;
+            text-decoration: none;
+      }
+       .left ul a.a-label{
+            /*color: #ffffff;*/
+            background-color: #BD2D30;
+      }
+      .left ul li{
+                display: block;
+                padding: 5px 0 5px 15px;
+                font-size: 12px;
+                border-bottom: 0px solid #ddd;
+      }
+      .left ul li:hover{
+            background-color: #aaa;  
+            color: #fff;
+      }
+     
+       .middle{
+            width: 621px;
+            float: left;
+            padding: 20px;
+       }
+       .middle h1{
+                margin: 0 0 25px 0px;
+                font-size: 28px;
+                font-weight: 400;
+       }
+       .shang{
+            margin-right: 20px;
+            padding-right: 20px;
+            line-height: center;
+       }
+       .xia{
+            padding-left: 20px;
+       }
+       .absolute{
+            width: 5px;
+            height: 10px;
+       }
+       .up{
+            float: left;
+            margin: 5px 15px 5px 0px;
+            background-image: url(./image/up.png);
+       }
+       .down{
+            float: right;
+            background-image: url(./image/down.png);
+            margin: 5px 0px 5px 15px;
+       }
+       /*.middle div.p-absolute{
+            float: right;
+            background-image: url(./image/down.png);
+            top: 5px;
+            bottom: 0px;
+            left: 150px;
+       }*/
+       .middle p strong{
+            font-size: 18px;
+            color: #3f3f3f;
+            font-weight: 800;
+       }
+       .middle hr{
+            border: 1px solid #e8e7e3;
+            border-top: none;
+            margin:30px 0;
+       }
+       .tip span{
+            color: #ff9955;
+       }
+       .text{
+            padding: 8px 18px;
+            background-color: #f5f5f5;
+            margin: 30px auto;
+            padding: 20px;
+            border: 1px dotted #785;
+            font-family: '微软雅黑';
+     }
+    
+     .qinzi{
+          height: 30px;
+          width: 120px;
+          background-color:#e9686b;
+          border: none;
+          color: black;
+          border-radius: 3px;
+     }
+     .qinzi:hover{
+          background-color:#ba3537;
+
+     }
+     #yunserveradv{
+            width: 561px;
+            height: 350px;
+            padding: 20px;
+            margin:10px;
+            background-color: #e8e7e3;    
+       }
+       .right{
+            width: 178px;
+            float: left;
+            height: 2385px;
+            border:1px solid #e8e7e3;
+       }
+       .tool{
+            width: 178px;
+            height:36px;
+            background-image: url(./image/bg.png);
+            background-position: -400px -722px;
+       }
+       .all{
+            height: 60px;
+            width: 130px;
+            margin:20px 24px 10px 24px;
+            border-radius: 5px;
+            background-image: url(./image/bg.png);
+       }
+       .book{
+            margin:20px 24px 10px 24px;
+            background-position:-5px -400px;
+       }
+       .book:hover{
+            background-image: url(./image/bg.png);
+            background-position:-5px -465px;
+       }
+       .lib{
+            background-position:-150px -400px;
+       }
+       .lib:hover{
+            background-image: url(./image/bg.png);
+            background-position:-150px -465px;
+       }
+       .test{
+            background-position:-300px -400px;
+       }
+       .test:hover{
+            background-image: url(./image/bg.png);
+            background-position:-300px -465px;
+       }
+       .sponsor{
+            width: 178px;
+            height: 36px;
+            background-image: url(./image/bg.png);
+            background-position: -800px -720px;
+       }
+       .sponsor:hover{
+            background-image: url(./image/bg.png);
+            background-position: -600px -700px;
+       }
+       .aliadv{
+            width: 158px;
+            height: 550px;
+            margin:10px;
+            background-color: #e8e7e3;
+
+       }
+       .foot{
+            height: 50px;
+            background-color: #e8e7e3;
+            margin-top: 0px;                              
+            font-size: 12px;
+            text-align: center;
+            color: #777777;
+            padding-top: 10px;
+            padding-bottom: 10px;
+       }                                                                                                      
+       .p{
+            font-size: 12px;
+            text-align: center;
+            margin: 20px;
+            color: #777777;
+
+       }
+      </style>
+</head>
+<body>
+<div class=" head clearfix">
+      <a href="http://www.w3school.com.cn/index.html"><div class="school"></div></a>
+      <div class="adv">
+            <h1>招租广告位    </h1>
+      </div>
+</div>
+<div class="top">
+      <ul class="clearfix">
+            <li class="topli"><a href="http://www.w3school.com.cn/index.html" >HTML/CSS</a></li>
+            <li>Javascript</li>
+            <li>Server Side</li>
+            <li>HTML/CSS</li>
+            <li>ASP.NET</li>
+            <li>XML</li>
+            <li>Web Services</li>
+            <li>Web Building</li>
+      </ul>
+</div>
+<div class="second clearfix">
+      <div class="left">
+      <div class="course"></div>
+      <h2 class="courseh2">HTML 基础教程</h2>
+      <ul>
+            <li class="a-label"><a href="http://www.w3school.com.cn/html/index.asp" >HTML 教程</a></li>
+            <li>HTML 编辑器</li>
+            <li  class="redHTML">HTML 基础</li>
+            <li>HTML 元素</li>
+            <li>HTML 属性</li>
+            <li>HTML 标题</li>
+            <li>HTML 段落</li>
+            <li>HTML 样式</li>
+            <li>HTML 格式化</li>
+            <li>HTML 引用</li>
+            <li>HTML 计算机代码</li>
+            <li>HTML 注释</li>
+            <li>HTML css</li>
+            <li>HTML 链接</li>
+            <li>HTML 图像</li>
+            <li>HTML 表格</li>
+            <li>HTML 列表</li>
+            <li>HTML 块</li>
+            <li>HTML 类</li>
+            <li>HTML 布局</li>
+            <a href="/html/html_responsive.asp" title="HTML 布局"><li>HTML 响应式设计</li></a>
+            <li><a href="/html/html_frames.asp" title="HTML 框架">HTML 框架</a></li>
+            <li><a href="/html/html_iframe.asp" title="HTML Iframe">HTML 内联框架</a></li>
+            <li><a href="/html/html_backgrounds.asp" title="HTML 背景">HTML 背景</a></li>
+            <li><a href="/html/html_scripts.asp" title="HTML 脚本">HTML 脚本</a></li>
+            <li><a href="/html/html_head.asp" title="HTML 头部元素">HTML 头部</a></li>
+            <li><a href="/html/html_entities.asp" title="HTML 实体">HTML 实体</a></li>
+            <li><a href="/html/html_url.asp" title="HTML 统一资源定位器">HTML URL</a></li>
+            <li><a href="/html/html_urlencode.asp" title="HTML URL 编码">HTML URL 编码</a></li>
+            <li><a href="/html/html_webserver.asp" title="HTML Web 服务器">HTML Web 服务器</a></li>
+            <li><a href="/html/html_colors.asp" title="HTML 颜色">HTML 颜色</a></li>
+            <li><a href="/html/html_colornames.asp" title="HTML 颜色名">HTML 颜色名</a></li>
+            <li><a href="/html/html_doctype.asp" title="HTML <!DOCTYPE>">HTML 文档类型</a></li>
+            <li><a href="/html/html_quick.asp" title="HTML 4.01 速查手册">HTML 速查手册</a></li>
+      </ul>
+      <h2 class="courseh2">HTML XHTML</h2>
+      <ul>
+      <li><a href="/html/html_xhtml.asp" title="XHTML 简介">XHTML 简介</a></li>
+      <li><a href="/html/html_xhtml_elements.asp" title="XHTML - 元素">XHTML 元素</a></li>
+      <li><a href="/html/html_xhtml_attributes.asp" title="XHTML - 属性">XHTML 属性</a></li>
+      </ul>
+      <h2 class="courseh2">HTML 表单</h2>
+      <ul>
+      <li><a href="/html/html_forms.asp" title="HTML 表单和输入">HTML 表单</a></li>
+      <li><a href="/html/html_form_elements.asp" title="HTML 表单元素">HTML 表单元素</a></li>
+      <li><a href="/html/html_form_input_types.asp" title="HTML Input 类型">HTML 输入类型</a></li>
+      <li><a href="/html/html_form_attributes.asp" title="HTML 输入属性">HTML 输入属性</a></li>
+      </ul>
+      <h2 class="courseh2">HTML5</h2>
+      <ul>
+      <li><a href="/html/html5_intro.asp" title="HTML5 简介">HTML5 简介</a></li>
+      <li><a href="/html/html5_browsers.asp" title="HTML5 浏览器支持">HTML5 支持</a></li>
+      <li><a href="/html/html5_new_elements.asp" title="HTML5 视频">HTML5 元素</a></li>
+      <li><a href="/html/html5_semantic_elements.asp" title="HTML5 Video + DOM">HTML5 语义</a></li>
+      <li><a href="/html/html5_migration.asp" title="HTML5 音频">HTML5 迁移</a></li>
+      <li><a href="/html/html5_syntax.asp" title="HTML5 拖放">HTML5 代码约定</a></li>
+      </ul>
+      <h2 class="courseh2">HTML 图形</h2>
+      <ul>
+      <li><a href="/html/html5_canvas.asp" title="HTML5 Canvas">HTML5 画布</a></li>
+      <li><a href="/html/html5_svg.asp" title="HTML5 内联 SVG">HTML5 SVG</a></li>
+      <li><a href="/html/html5_canvas_vs_svg.asp" title="HTML5 Canvas vs. SVG">HTML5 画布 vs SVG</a></li>
+      </ul>
+      <h2 class="courseh2">HTML 媒体</h2>
+      <ul>
+      <li><a href="/html/html_media.asp" title="HTML 多媒体">HTML 媒体</a></li>
+      <li><a href="/html/html_object.asp" title="HTML Object 元素">HTML 对象</a></li>
+      <li><a href="/html/html_audio.asp" title="HTML 音频">HTML 音频</a></li>
+      <li><a href="/html/html_video.asp" title="HTML 视频">HTML 视频</a></li>
+      </ul>
+      <h2 class="courseh2">HTML API</h2>
+      <ul>
+      <li><a href="/html/html5_geolocation.asp" title="HTML5 地理定位">HTML5 地理定位</a></li>
+      <li><a href="/html/html5_draganddrop.asp" title="HTML5 拖放">HTML5 拖放</a></li>
+      <li><a href="/html/html5_webstorage.asp" title="HTML5 Web 存储">HTML5 Web 存储</a></li>
+      <li><a href="/html/html5_app_cache.asp" title="HTML 5 应用程序缓存">HTML5 应用缓存</a></li>
+      <li><a href="/html/html5_webworkers.asp" title="HTML5 Web Workers">HTML5 Web Workers</a></li>
+      <li><a href="/html/html5_serversentevents.asp" title="HTML5 服务器发送事件">HTML5 SSE</a></li>
+      </ul>
+      <h2 class="courseh2">实例/测验/总结</h2>
+      <ul>
+      <li><a href="/example/html_examples.asp" title="HTML 实例">HTML 实例</a></li>
+      <li><a href="/html/html_quiz.asp" title="HTML 测验">HTML 测验</a></li>
+      <li><a href="/html/html_summary.asp" title="HTML 总结">HTML 总结</a></li>
+      </ul>
+      <h2 class="courseh2">HTML 参考手册</h2>
+      <ul>
+      <li><a href="/tags/index.asp" title="HTML 4.01 / XHTML 1.0 参考手册">HTML 标签列表</a></li>
+      <li><a href="/tags/html_ref_standardattributes.asp" title="HTML 标准属性">HTML 属性</a></li>
+      <li><a href="/tags/html_ref_eventattributes.asp" title="HTML 事件属性">HTML 事件</a></li>
+      <li><a href="/tags/html_ref_dtd.asp" title="HTML 元素与合法的 Doctype">HTML 合法 DTD</a></li>
+      <li><a href="/tags/html_ref_colornames.asp" title="HTML 颜色名">HTML 颜色名</a></li>
+      <li><a href="/tags/html_ref_charactersets.asp" title="HTML 字符集">HTML 字符集</a></li>
+      <li><a href="/tags/html_ref_ascii.asp" title="HTML ASCII 参考手册">HTML ASCII</a></li>
+      <li><a href="/tags/html_ref_entities.html" title="HTML ISO-8859-1 参考手册">HTML ISO-8859-1</a></li>
+      <li><a href="/tags/html_ref_symbols.html" title="HTML 4.01 符号实体">HTML 符号</a></li>
+      <li><a href="/tags/html_ref_urlencode.html" title="HTML URL 编码">HTML URL 编码</a></li>
+      <li><a href="/tags/html_ref_language_codes.asp" title="HTML 语言代码参考手册">HTML 语言代码</a></li>
+      <li><a href="/tags/html_ref_httpmessages.asp" title="HTML 状态消息">HTML 消息</a></li>
+      </ul>
+      <h2 class="courseh2">HTML5</h2>
+      <ul>
+      <li><a href="/html/index.asp" title="HTML5 教程">HTML5 教程</a></li>
+      <li><a href="/tags/index.asp" title="HTML5 参考手册">HTML5 参考手册</a></li>
+      </ul>
+      </div>
+      <div class="middle">
+            <h1>基本的 HTML 标签 - 四个实例</h1>
+            <button type="button" class="shang"><div class="absolute up"></div>上一节</button>
+            <button type="button" class="xia"><div class="absolute down p-absolute"></div>下一节</button>
+            <hr>
+            <p><strong>本章通过实例向您演示最常用的 HTML 标签。</strong></p>
+            <p class="tip"><span>提示：</span>不要担心本章中您还没有学过的例子，您将在下面的章节中学到它们。</p>
+            <p class="tip"><span>提示：</span>学习 HTML 最好的方式就是边学边做实验。我们为您准备了很好的 HTML 编辑器。使用这个编辑器，您可以任意编辑一段 HTML 源码，然后单击 TIY 按钮来查看结果。</p>
+            <hr>
+            <h2>HTML标题</h2>
+            <p>HTML 标题（Heading）是通过 < h1> - < h6> 等标签进行定义的。</p>
+            <h3>实例</h3>
+            <div class="text">
+                 < h1 >This is a heading< / h1></br>
+                 < h2 >This is a heading< / h2></br>
+                 < h3 >This is a heading< / h3>
+            </div>
+            <button type="button" class="qinzi">亲自试一试</button>
+            <hr>
+            <h3>HTML 段落</h3>
+            <p>HTML 段落是通过 &lt;p&gt; 标签进行定义的。</p>
+            <h3>实例</h3>
+            <div class="text">
+                  This is a paragraph.</br>
+                  This is another paragraph.
+            </div>
+            <button type="button" class="qinzi">亲自试一试</button>
+            <hr>
+            <h3>HTML 链接</h3>
+            <p>HTML 链接是通过 < a> 标签进行定义的。</p>
+            <h3>实例</h3>
+            <div class="text">
+                  < a href="http://www.w3school.com.cn">This is a link</ a>
+            </div>
+            <button type="button" class="qinzi">亲自试一试</button>
+            <p><b>注释：</b>在 href 属性中指定链接的地址。</p>
+            <p>（您将在本教程稍后的章节中学习更多有关属性的知识）。</p>
+            <hr>
+            <h3>HTML 图像</h3>
+            <p>HTML 图像是通过 < img> 标签进行定义的。</p>
+            <h3>实例</h3>
+            <div class="text">
+                  < img src="w3school.jpg" width="104" height="142" />
+            </div>
+            <button type="button" class="qinzi">亲自试一试</button>
+            <p><b>注释：</b>图像的名称和尺寸是以属性的形式提供的。</p>
+            <hr>
+            <button type="button" class="shang"><div class="absolute up"></div>上一节</button>
+            <button type="button" class="xia"><div class="absolute down p-absolute"></div>下一节</button>
+            <hr>
+            <div yunserveradv><h1>还是广告位，招租呀！！！</h1></div>
+
+      </div>
+      <div class="right">
+            <div class="tool"></div>
+            <a href="http://www.w3school.com.cn/tags/index.asp"><div class=" all book"></div></a>
+            <a href="http://www.w3school.com.cn/example/html_examples.asp"><div class="all lib"></div></a>
+            <a href="http://www.w3school.com.cn/html/html_quiz.asp"><div class="all test"></div></a>
+            <div class="sponsor"></div>
+            <div class="aliadv"><h1>广告位招租！！！！！</h1></div>
+      </div>
+</div>
+<div class="foot">
+      <p>W3School 提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。</br>
+      W3School 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+      </p>
+</div>
+<p class="p">当使用本站时，代表您已接受了本站的使用条款和隐私条款。版权所有，保留一切权利。 赞助商：上海赢科投资有限公司。 蒙ICP备06004630号</p>
+
+      
+</body>
+</html>
