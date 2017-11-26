@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="./js/vue.js"></script>
+    <script type="text/javascript" src="./js/jquery-3.2.0.min.js"></script>
+    <title>Document</title>
+    <style media="screen">
+      ul,li {
+        list-style: none;
+      }
+      .title, .content, .editor-ok{
+        display: none;
+      }
+    </style>
+</head>
+<body>
+    <div id="component">
+        <button type="button" @click="addTop()">新增一条开始</button>
+        <button type="button" @click="addNew()">新增一条最后</button>
+        <button type="button" @click="addMoreNew()">新增很多条最后</button>
+        <button type="button" @click="deleteTop()">删除第一条</button>
+        <button type="button" @click="deleteLast()">删除最后一条</button>
+        <button type="button" @click="reverseData()">翻转数据</button>
+        <ul>
+          <li v-for="item in list"><span>{{ item.title }}</span> <span>-</span><span>{{ item.content }}</span> <button type="button" class="del" @click="delThis(item)">删除</button><button class="editor">编辑</button><button class="editor-ok" @click="editorTC(item)">确认编辑</button> </li>
+          <input type="text" class="title" placeholder="标题">
+          <input type="text" class="content" placeholder="内容">
+        </ul>
+    </div>
+    <script>
+        var List = new Vue({
+          el:"#component",
+          data: {
+            list: [
+              {
+                "title":"111",
+                "content":"1111111"
+              },
+              {
+                "title":"222",
+                "content":"2222222"
+              },
+              {
+                "title":"333",
+                "content":"3333333"
+              },
+              {
+                "title":"444",
+                "content":"4444444"
+              },
+            ],
+            a:"hahahhahah",
+          },
+          methods: {
+            addNew: function(){
+              var newItem = {
+                "title":"你好",
+                "content":"你好你好你好你好",
+              };
+              this.list.push(newItem);
+            },
+            addTop:function(){
+              var newadd = {
+                "title":"hello",
+                "content":"你好你好你好你好",
+              };
+              this.list.unshift(newadd);
+            },
+            addMoreNew:function(){
+              var nnewadd = [
+              {
+                "title":"hello",
+                "content":"你好你好你好你好",
+              },
+              {
+                "title":"hello",
+                "content":"你好你好你好你好",
+              },
+              ];
+              this.list = this.list.concat(nnewadd);
+            },
+            deleteTop:function(){
+              this.list.shift();
+            },
+            deleteLast:function(){
+              this.list.pop();
+            },
+            reverseData:function(){
+              this.list.reverse();
+            },
+            delThis:function(abc){
+              var that = this;
+              that.list.forEach(function(nowitem,index){
+                if(nowitem==abc){
+                  that.list.splice(index,1);
+                }
+              })
+            },
+          editorTC:function(asd){
+            var strTitle = $(".title").val();
+            var strContent = $(".content").val();
+            console.log(strTitle);
+            console.log(strContent);
+            if(strTitle!=""&&strContent!=""){
+              asd.title = strTitle;
+              asd.content = strContent;
+            }else{
+              alert("标题或内容不能为空！")
+            }
+            strTitle = $(".title").val("");
+            strContent = $(".content").val("");
+          }
+        }
+        })
+        $(function(){
+          $(".editor").click(function(){
+            $(this).siblings(".editor-ok").show();
+            $(".title").show();
+            $(".content").show();
+          })
+          $(".editor-ok").click(function(){
+            $(this).hide();
+            $(".title").hide();
+            $(".content").hide();
+          })
+        })
+    </script>
+</body>
+</html>

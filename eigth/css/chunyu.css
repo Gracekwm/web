@@ -1,0 +1,333 @@
+html, body, span, a, header, input, h6, i, p,ul, li, footer{
+	padding: 0;
+	margin: 0;
+}
+html, body{
+    font-size: 41.5px;
+	background: #f1f1f1;
+}
+a{
+	text-decoration: none;
+    color: #666;
+}
+ul{
+    list-style: none;
+}
+.clearfix::after{
+    display: block;
+    clear: both;
+    content: "";
+    height: 0;
+}
+.down-bar{
+	line-height: 1.06667rem;
+    overflow: hidden;
+    background-color: #656565;
+    padding-left: .48rem;
+    color: #fff;
+    font-size: 0rem;
+}
+.close-down{
+	display: inline-block;
+    width: .58667rem;
+    height: .58667rem;
+    margin-right: .24rem;
+    vertical-align: middle;
+    background: url(../images/down-close.png) no-repeat left top; 
+    background-size: .58667rem auto;
+}
+.download{
+    display: inline-block;
+    height: 0.61333rem;
+    line-height: 0.61333rem;
+	vertical-align: middle;
+    padding-left: 0.8rem;
+    font-size: 0.32rem;
+    background: url(../images/logo.png) no-repeat left center;
+    background-size: 0.61333rem 0.61333rem;
+}
+.down-bar a{
+    display: block;
+    float: right;
+    width: 2.13333rem;
+    color: #fff;
+    font-size: 0.32rem;
+    text-align: center;
+    background-color: #37cf6b;
+}
+header{
+    border-bottom: 1px solid #f4f4f4;
+    background-color: #fff;
+}
+.header-top{
+    position: relative;
+    width: 100%;
+    padding: .4rem .32rem .4rem 0;
+}
+.header-top img{
+    display: block;
+    height: .64rem;
+    width: 2.8rem;
+    margin: 0 auto;
+    margin-top: .16rem;
+}
+.header-top a{
+    position: absolute;
+    width: .64rem;
+    height: .64rem;
+    right: .64rem;
+    top: .53333rem;
+    background: url(../images/login.png) no-repeat left top;
+    background-size: .64rem auto;
+}
+.header-search{
+    border-top: 1px solid #f4f4f4;
+    border-bottom: 1px solid #f4f4f4;
+    height: .8rem;
+    position: relative;
+    overflow: hidden;
+    padding: .09667rem .21333rem;
+}
+.query{
+    width: 97%;
+    font-size: .37333rem;
+    vertical-align: top;
+    color: #666;
+    border: 0;
+    padding: 0 0 0 0.4rem;
+    outline: 0;
+    background-color: #F4F4F4;
+    height: .74667rem;
+    border-radius: .10667rem;
+}
+.search-del, .search-logo{
+    position: absolute;
+    top: 50%;
+}
+.search-del{
+    margin-top: -.26667rem;
+    right: 1.06667rem;
+    height: .53333rem;
+    width: .53333rem;
+    border-radius: 50%;
+    background: url(../images/search-del.png) no-repeat center;
+    background-size: .53333rem auto;
+}
+.search-logo{
+    margin-top: -.4rem;
+    height: .8rem;
+    width: .66667rem;
+    right: .4rem;
+    background: url(../images/search.png) no-repeat center;
+    background-size: .45333rem .45333rem;
+}
+.quick-question{
+    position: relative;
+    padding: .53333rem .4rem .53333rem 1.86667rem;
+    background: url(../images/quick-question.png) no-repeat .53333rem center #fff;
+    background-size: .98667rem auto;
+}
+.quick-question h6{
+    font-size: .58667rem;
+    font-weight: 400;
+    color: #323232;
+}
+.quick-question-tip{
+    font-size: 14px;
+    color: #999;
+}
+.next-icon{
+    position: absolute;
+    top: 50%;
+    right: .4rem;
+    width: .16rem;
+    height: .26667rem;
+    background: url(../images/next-icon.png) no-repeat left top;
+    background-size: 100%;
+}
+.find-doctor{
+    overflow: hidden;
+    text-align: center;
+    border-top: 1px solid #f4f4f4;
+}
+.disease-doctor{
+    border-right: 1px solid #f4f4f4;
+    background: url(../images/disease-doctor.png);
+    background-size: .85333rem;
+}
+.hospital-doctor{
+    background: url(../images/hospital-doctor.png);
+
+}
+.disease-doctor, .hospital-doctor{
+    padding: 1.49333rem 0 .13333rem;
+    float: left;
+    width: 49%;
+    font-size: 15px;
+    color: #666;
+    background-color: #FFF;
+    background-repeat: no-repeat;
+    background-size: 1.01333rem;
+    background-position: center .26667rem;
+}
+.carousel{
+    margin-bottom: .26667rem;
+    background-color: #fff;
+}
+.swiper-container{
+    position: relative;
+    height: 2.77333rem;
+    width: 10rem;
+    overflow: hidden;
+}
+.swiper-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.swiper-slide{
+    width: 414px;
+}
+.swiper-slide img{
+    height: 100%;
+    width: 100%;
+}
+.classic-q-a{
+    font-size: .42667rem;
+    color: #323232;
+    padding: .32rem;
+    background-color: #fff;
+    margin-top: .26667rem;
+}
+.classic-q-a-hot{
+    display: inline-block;
+    width: .8rem;
+    height: .29333rem;
+    background: url(../images/classic-q-a-hot.png) no-repeat left top;
+    background-size: .82667rem auto;
+    vertical-align: 7px;
+}
+.more{
+    float: right;
+    font-size: .37333rem;
+    padding-top: .13333rem;
+    padding-right: .32rem;
+    color: #999;
+    text-decoration: none;
+    background: url(../images/more.png) no-repeat right .16rem;
+    background-size: .16rem auto;
+    line-height: 1;
+}
+.hot-q-a-warp{
+    background-color: #fff;
+    font-size: .37333rem;
+    color: #323232;
+}
+.question-list{
+    display: block;
+    border-top: 1px solid #f1f1f1;
+    padding: .32rem .32rem .4rem;
+}
+.question-list:first-child, .health-infor:first-child{
+    border-top: 0;
+}
+.question-title{
+    font-size: .37333rem;
+    margin-bottom: .13333rem;
+    line-height: .42667rem;
+    color: #323232;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.question-title-tag{
+    display: inline-block;
+    font-size: .34667rem;
+    color: #fff;
+    width: .42667rem;
+    margin-bottom: .13333rem;
+    background-color: #ffa800;
+    text-align: center;
+    font-weight: 400;
+    margin-right: .10667rem;
+    -webkit-border-radius: .05333rem;
+    border-radius: .05333rem;
+}
+.question-description, .title{
+    color: #323232;
+    margin-left: .53333rem;
+    line-height: .56rem;
+    overflow: hidden;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.block-list-wrap{
+    padding: .13333rem;
+    overflow: hidden;
+    background-color: #fff;
+}
+.block-list{
+    float: left;
+    font-size: 15px;
+    padding: .13333rem .18667rem;
+    margin: .18667rem .26667rem;
+    text-align: center;
+    border: 1px solid #e7e7e7;
+    border-radius: .05333rem;
+}
+.health-infor{
+    background-color: #fff;
+}
+.health-infor-list{
+    display: block;
+    padding: .53333rem .4rem;
+    overflow: hidden;
+    height: 2rem;
+    border-bottom: 1px solid #e7e7e7;
+}
+.health-pic{
+    float: left;
+    margin-right: .26667rem;
+    height: 2rem;
+    width: 2.4rem;
+}
+.health-infor-detail{
+    position: relative;
+    font-size: 23px;
+    height: 2rem;
+    overflow: hidden;
+}
+.h-info-footer{
+    position: absolute;
+    height: .48rem;
+    line-height: .48rem;
+    overflow: hidden;
+    bottom: 0;
+}
+.topic-type, .create-time{
+    font-size: .34667rem;
+    color: #999;
+    margin-right: .13333rem
+}
+footer{
+    color: #9b9b9b;
+    font-size: 12px;
+    padding: .4rem;
+    background-color: #3a3a3b;
+    text-align: center;
+}
+footer img {
+    display: block;
+    width: 2.53333rem;
+    margin: 0 auto .4rem;
+}
+footer p {
+    line-height: 1.2;
+    margin-bottom: .13333rem;
+}
